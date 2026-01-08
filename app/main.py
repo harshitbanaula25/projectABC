@@ -64,7 +64,7 @@ async def trigger_itinerary(
                 "status": {
                     "httpCode": "200",
                     "success": True,
-                    "message": "No itinerary created"
+                    "message":  f"Itinerary already exists for booking ID {booking_id}. Duplicate itinerary creation is not allowed."
                 },
                 "data": None
             }

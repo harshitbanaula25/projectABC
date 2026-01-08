@@ -9,7 +9,7 @@ def build_itinerary_response(itinerary):
         activity = wrapper["activity"]
 
         itinerary_details.append({
-            "itineraryDetailsId": index,  # temp id
+            "itineraryDetailsId": index,
             "day": index,
             "date": itinerary.first_activity_date.strftime("%d-%m-%Y"),
             "activity": activity,
