@@ -125,11 +125,12 @@ async def generate_itineraries(force=False, booking_id=None):
         db.commit()
         db.refresh(db_itinerary)
 
-        created_itineraries.append({
-            "package_booking_id": booking["packageBookingId"],
-            "pickup_time": pickup_datetime.isoformat(),
-            "activities": activities
-        })
+        # created_itineraries.append({
+        #     "package_booking_id": booking["packageBookingId"],
+        #     "pickup_time": pickup_datetime.isoformat(),
+        #     "activities": activities
+        # })
+        created_itineraries.append(db_itinerary)
 
     db.close()
     return created_itineraries
